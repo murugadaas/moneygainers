@@ -77,6 +77,7 @@ public class Moneygainers {
 		for (int i = 1; i <= 8; i++) {
 			row = sheet.createRow(rownum++);
 			String actual_cmp = bfrcomp_nmae + i + aftrcomp_name;
+			String compnsme = driver.findElement(By.xpath(actual_cmp)).getText();
 			cell = row.createCell(0);
 			
 			if (cell != null) {				
@@ -106,7 +107,7 @@ public class Moneygainers {
 			cell = row.createCell(4);
 			cell.setCellValue(gain);
 
-			System.out.println(curr_price + gain);
+			System.out.println( compnsme +"<------>"+curr_price +"<------>"+ gain);
 
 		}
 
